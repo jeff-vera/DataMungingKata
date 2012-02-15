@@ -12,15 +12,21 @@ namespace DataMungingKata
 		public WeatherDataRow(string validLine)
 		{
 			InputLine = validLine;
-			string [] inputLineComponents =
+
+			ParseValidLine();
+		}
+
+		private void ParseValidLine()
+		{
+			string[] inputLineComponents =
 				InputLine.Split(" ".ToCharArray(),
 				StringSplitOptions.RemoveEmptyEntries);
 
-			DayNumber = 
+			DayNumber =
 				int.Parse(inputLineComponents[0]);
-			HighTemperature = 
+			HighTemperature =
 				int.Parse(inputLineComponents[1]);
-			LowTemperature = 
+			LowTemperature =
 				int.Parse(inputLineComponents[2]);
 		}
 

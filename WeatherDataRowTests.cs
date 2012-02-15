@@ -28,8 +28,7 @@ namespace DataMungingKata
 		{
 			string validLine = "   1  88    59    74          53.8       0.00 F       280  9.6 270  17  1.6  93 23 1004.5";
 
-			WeatherDataRow row = 
-				new WeatherDataRow(validLine);
+			WeatherDataRow row = new WeatherDataRow(validLine);
 
 			Assert.That(row, Is.Not.Null);
 			Assert.That(row.DayNumber, Is.EqualTo(1));
